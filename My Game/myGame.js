@@ -18,6 +18,7 @@ function preload() {
    game.load.image('sky', 'assets/kewlsky.png');
    game.load.image('ground', 'assets/platform.png');
    game.load.image('star', 'assets/pineapple.png');
+   game.load.image('batmansign', 'assets/batmansign.png');
    game.load.spritesheet('dude', 'assets/mee.png', 60, 60);
 
 }
