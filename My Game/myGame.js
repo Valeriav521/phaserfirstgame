@@ -15,10 +15,10 @@ var scoreText;
 var collectStar;
 
 function preload() {
-   game.load.image('sky', 'assets/sky.png');
+   game.load.image('sky', 'assets/kewlsky.png');
    game.load.image('ground', 'assets/platform.png');
-   game.load.image('star', 'assets/star.png');
-   game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+   game.load.image('star', 'assets/pineapple.png');
+   game.load.spritesheet('dude', 'assets/mee.png', 60, 60);
 
 }
 
@@ -26,7 +26,7 @@ function create() {
    game.physics.startSystem(Phaser.Physics.ARCADE);
    //simple background
    game.add.sprite(0, 0, 'sky');
-   game.add.sprite(90, 90, 'star');
+   // game.add.sprite(90, 90, 'star');
    //platfirms group conatins the ground and the 2 ledges we can jump on
    platforms = game.add.group();
    platforms.enableBody = true;
@@ -37,7 +37,7 @@ function create() {
    ground.scale.setTo(2, 2);
    var ledge = platforms.create(45, 450, 'ground');
    ledge.body.immovable = true;
-   ledge = platforms.create(450, 100, 'ground');
+   ledge = platforms.create(0, 100, 'ground');
    ledge.body.immovable = true;
    ledge = platforms.create(300, 350, 'ground');
    ledge.body.immovable = true;
@@ -67,10 +67,7 @@ function create() {
 
    }
 
-   // scoreText = game.add.text(16, 16, 'score: 0', {
-   //    fontSize: '32px ,
-   //    fill: '#000'
-   // });
+   scoreText = game.add.text(16, 16, 'score 0', { fontSize: '32px', fill: '#000' });
    cursors = game.input.keyboard.createCursorKeys();
 
 
