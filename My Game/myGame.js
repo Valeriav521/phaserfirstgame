@@ -11,8 +11,10 @@ var player;
 var cursors;
 var hitPlatform;
 var stars;
+var score;
 var scoreText;
 var collectStar;
+var collectingItem = 'batmansign'
 
 function preload() {
    game.load.image('sky', 'assets/kewlsky.png');
@@ -112,4 +114,13 @@ function update() {
 function collectStar(player, star) {
    //collects the star
    star.kill();
+   score++;
+   /* batmansign.kill();
+    if (score === 60) collectingItem = "batmansign";
+    //if (score === 120) collectingItem = "doughnut";
+    if (score % 12 === 0) {
+        // Here we'll create 12 of them evenly spaced apart
+        for (var i = 0; i < 12; i++) {
+            //Create a star inside of the 'sushis' group
+            var batmansign = batmansign.create(i * 70, 0, collectingItem);*/
 }
